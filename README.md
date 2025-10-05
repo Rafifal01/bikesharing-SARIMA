@@ -25,7 +25,7 @@ Proyek ini memprediksi jumlah peminjaman sepeda menggunakan model hybrid Gradien
    atau di Windows:
 
    ```sh
-   caps_env\Scripts\activate.bat
+   caps_env\Scripts\activate
    ```
 
 2. **Install dependencies**
@@ -36,7 +36,7 @@ Proyek ini memprediksi jumlah peminjaman sepeda menggunakan model hybrid Gradien
 
 3. **Jalankan aplikasi Streamlit**
    ```sh
-   streamlit run app.py
+   uv run streamlit run app.py
    ```
 
 ## Fitur
