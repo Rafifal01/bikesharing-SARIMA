@@ -66,7 +66,7 @@ st.markdown("""
 .big-font {font-size:22px !important;}
 </style>
 """, unsafe_allow_html=True)
-st.markdown('<p class="big-font">Prediksi jumlah peminjaman sepeda berdasarkan kondisi cuaca dan kalender.</p>', unsafe_allow_html=True)
+st.markdown('<p class="big-font">Predict the number of bicycles borrowed based on weather conditions and calendar.</p>', unsafe_allow_html=True)
 
 granularity = st.selectbox("Select Forecast Granularity:", ["Daily", "Weekly", "Monthly"])
 
@@ -74,9 +74,9 @@ granularity = st.selectbox("Select Forecast Granularity:", ["Daily", "Weekly", "
 n_periods = st.slider("How many periods to forecast?", 7, 60, 14)
 
 with st.sidebar:
-    st.header("🔧 Input Kondisi")
+    st.header("🔧 Input Condition")
     
-    st.subheader("🔧 Input Kondisi Cuaca & Kalender")
+    st.subheader("🔧 Input Weather & Calendar Condition")
 
     season_map = {"Spring": 1, "Summer": 2, "Fall": 3, "Winter": 4}
     weathersit_map = {"Clear": 1, "Mist": 2, "Light Rain": 3, "Heavy Rain": 4}
@@ -185,4 +185,4 @@ if st.button("Run Forecast"):
     plt.legend()
     st.pyplot(plt)
 
-    st.metric("Prediksi Total", int(forecast_df["Hybrid Forecast"].sum()))
+    st.metric("Total Prediction", int(forecast_df["Hybrid Forecast"].sum()))
